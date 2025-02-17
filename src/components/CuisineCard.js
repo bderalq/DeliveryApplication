@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     card : {
         flexDirection: 'row', 
         alignItems: 'center', 
-        backgroundColor: '#fff', 
+        backgroundColor: '#ffff', 
         borderRadius: 20, 
         padding: 12,
         marginVertical: 6, 
@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
         elevation: 3, 
       },
       cuisinename:{
+        fontFamily : 'Thonburi',
         fontSize: 16,
         fontWeight: '600',
         color: '#333',    

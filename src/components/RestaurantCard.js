@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     card : {
         flexDirection: 'column', 
         alignItems: 'center', 
-        backgroundColor: '#fff', 
+        backgroundColor: '#ffff', 
         borderRadius: 20, 
         padding: 12,
         marginVertical: 8, 
@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
       },
       restaurantName:{
-        fontSize: 30,
+        fontFamily : 'Thonburi',
+        fontSize: 25,
         fontWeight: 'bold',
         color: '#333',      
         marginBottom:15
@@ -49,12 +50,14 @@ const styles = StyleSheet.create({
     },
     rating:{
         fontSize: 17,
+        fontFamily : 'Thonburi',
         fontWeight: '600',
         color: '#333',      
         marginBottom:10
     },
     time:{
-        fontSize: 20,
+        fontFamily : 'Thonburi',
+        fontSize: 15,
         fontWeight: '600',
         color: '#333',      
         marginBottom:15
