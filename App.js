@@ -1,43 +1,35 @@
-import { FlatList, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
-import CuisineCard from './src/components/CuisineCard';
-import restaurantCategories from './src/data/cuisine';
-import RestaurantCard from './src/components/RestaurantCard';
-import restaurants from './src/data/restaurants';
-import MenuCard from './src/components/MenuCard';
-import CuisinesPage from './src/screens/CuisinesPage';
-import RestaurantsPage from './src/screens/RestaurantsPage';
-import MenusPage from './src/screens/MenusPage';
-import DetailsCard from './src/components/DetailsCard';
-import DetailsPage from './src/screens/DetailsPage';
+import { StyleSheet } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import MainNavigator from "./src/navigation/MainNavigator";
+import { useCallback, useEffect, useState } from "react";
+import * as SplashScreen from "expo-splash-screen";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import UserContext from "./src/context/UserContext";
+import AuthNavigator from "./src/navigation/AuthNavigator";
+import { getToken } from "./src/api/storage";
+
+
 export default function App() {
+  const [isAuth, setIsAuth] = useState(false);
+  const queryClient = new QueryClient();
+
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-            <CuisinesPage />
-      <RestaurantsPage />
-      <MenusPage />
-      <DetailsPage />
-    </ScrollView>
+    <NavigationContainer>
+      <QueryClientProvider client={queryClient}>
+        <UserContext.Provider value={{ isAuth, setIsAuth }}>
+          {isAuth ? <MainNavigator /> : <AuthNavigator />}
+        </UserContext.Provider>
+      </QueryClientProvider>
+    </NavigationContainer>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: '#ffff',
+    backgroundColor: "#ffff",
     paddingTop: 90,
     paddingBottom: 30,
-    paddingHorizontal: 15, 
-  }, listContainer: {
-    width: '100%',
-    alignItems: 'center',
-    paddingBottom: 20, 
-  }, title :{
-    fontSize :25,
-    fontWeight :'bold',
-    fontFamily : 'Thonburi',
-    color: '#333',  
-    marginBottom: 10
-  }
+    paddingHorizontal: 15,
+  },
 });

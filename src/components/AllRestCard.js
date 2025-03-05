@@ -1,37 +1,36 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 
-const RestaurantCard = ({name, image, rating, deliveryTime}) => {
+const AllRestCard = ({name, image, rating, deliveryTime}) => {
   return (
     // <TouchableOpacity style={styles.card}> 
     <View style = {styles.card}>
-              <Image 
-           source={{ uri: image }} 
-           style={styles.image} 
-           resizeMode="contain"
-         />
-         <View style = {styles.infoContainer}>
-         <Text style={styles.restaurantName}>{name}</Text>
-         <Text style={styles.rating}>⭐ {rating}</Text>
-         <Text style={styles.deliveryTime}>⏱️ {deliveryTime}</Text>
-         </View>
-   
-         <View style = {styles.infoContainer}>
-   
-         <Text style={styles.viewMenu}>VIEW MENU 🍔</Text>
-         </View>
-   
-         </View>
+           <Image 
+        source={{ uri: image }} 
+        style={styles.image} 
+        resizeMode="contain"
+      />
+      <View style = {styles.infoContainer}>
+      <Text style={styles.restaurantName}>{name}</Text>
+      <Text style={styles.rating}>⭐ {rating}</Text>
+      <Text style={styles.deliveryTime}>⏱️ {deliveryTime}</Text>
+      </View>
+
+      <View style = {styles.infoContainer}>
+
+      <Text style={styles.viewMenu}>VIEW MENU 🍔</Text>
+      </View>
+
+      </View>
 // </TouchableOpacity>
   )
 }
-
-export default RestaurantCard
+export default AllRestCard;
 
 const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
-    alignItems:'center',
+  alignItems:'center',
     backgroundColor: '#746574',
     borderRadius: 15,
     padding: 20,

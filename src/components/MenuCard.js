@@ -42,7 +42,7 @@ const MenuCard = ({image, name, price}) => {
           shadowRadius: 4,
         },
         restaurantName:{
-          fontFamily : 'Thonburi',
+          fontFamily : 'Roboto',
           fontSize: 20,
           fontWeight: 'bold',
           color: '#333',      
@@ -57,13 +57,13 @@ const MenuCard = ({image, name, price}) => {
       },
       rating:{
           fontSize: 15,
-          fontFamily : 'Thonburi',
+          fontFamily : 'Roboto',
           fontWeight: '600',
           color: '#333',      
           marginBottom:10,
       },
       time:{
-          fontFamily : 'Thonburi',
+          fontFamily : 'Roboto',
           fontSize: 15,
           fontWeight: '600',
           color: '#333',      
@@ -78,7 +78,7 @@ const MenuCard = ({image, name, price}) => {
       },
       addto : {
         fontSize: 14,
-        fontFamily : 'Thonburi',
+        fontFamily : 'Roboto',
         fontWeight: '600',
         color: '#333',      
         marginBottom:10,

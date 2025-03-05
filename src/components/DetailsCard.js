@@ -3,8 +3,9 @@ import React from 'react'
 
 const DetailsCard = ({image,name,price, description}) => {
   return (
+  
      <View style={styles.card}> 
-            <Image 
+     <Image 
          source={{ uri: image }} 
          style={styles.image} 
          resizeMode="contain"
@@ -28,43 +29,44 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         backgroundColor: '#fff',
-        borderRadius: 20,
-        marginVertical: 8,
-        width: '85%',
-        height: 420,
+        borderRadius: 15,
+        marginVertical: 12,
+        paddingVertical: 20, 
+        width: '90%', 
+        height: 'auto', 
         borderWidth: 1,
-        borderColor: '#fff',
+        borderColor: '#eee', 
         shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 4,
-        padding: 15,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.2,
+        shadowRadius: 8,
+        paddingHorizontal: 15,
       },
       restaurantName:{
-        fontFamily : 'Thonburi',
-        fontSize: 22,
+        fontFamily : 'Roboto',
+        fontSize: 24,
         fontWeight: 'bold',
         color: '#333',      
         marginBottom:10,
         textAlign:'center'
     }, 
      image: {
-        width: 200, 
-        height: 170, 
-        borderRadius: 10, 
+        width: '100%', 
+        height: 250, 
+        borderRadius: 15, 
         marginBottom: 15,
 
     },
     rating:{
-        fontSize: 16,
-        fontFamily : 'Thonburi',
+        fontSize: 18,
+        fontFamily : 'Roboto',
         fontWeight: '600',
         color: '#333',      
-        marginBottom:15,
+        marginBottom:20,
         textAlign:'center'
     },
     time:{
-        fontFamily : 'Thonburi',
+        fontFamily : 'Roboto',
         fontSize: 15,
         fontWeight: '600',
         color: '#333',      
@@ -79,7 +81,7 @@ const styles = StyleSheet.create({
     },
     addto : {
       fontSize: 14,
-      fontFamily : 'Thonburi',
+      fontFamily : 'Roboto',
       fontWeight: '600',
       color: '#333',      
       marginBottom:10,
@@ -90,17 +92,18 @@ const styles = StyleSheet.create({
     },
     description : {
         fontSize: 15,
-        fontFamily : 'Thonburi',
+        fontFamily : 'Roboto',
         fontWeight: '600',
         color: '#333',      
         marginBottom:10,
         textAlign:'center',
         // paddingHorizontal: 10
     }, title : {
-        fontSize : 16,
+        fontSize : 18,
         fontWeight:'bold',
-        fontFamily:'Thonburi',
-        marginBottom:5,
-        textAlign:'center'
+        fontFamily:'Roboto',
+        marginBottom:8,
+        textAlign:'center',
+        paddingHorizontal :10
     }
 })
